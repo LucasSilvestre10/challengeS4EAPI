@@ -39,6 +39,27 @@ Public Class EditAssociateForm
         associate.Cpf = txtCpf.Text
         associate.BirthDay = DateTime.ParseExact(txtBirthDay.Text, "yyyy-MM-dd", Nothing)
 
+        Dim companiesIds As String = txtCompaniesIds.Text.Trim()
+
+        ' Limpar a lista atual de associados
+        associate.CompaniesList.Clear()
+
+        ' Verificar se a string de IDs não está vazia
+        If Not String.IsNullOrEmpty(companiesIds) Then
+            ' Dividir a string em IDs individuais
+            Dim ids As String() = companiesIds.Split(","c)
+            Dim associateIdList As New List(Of Integer)()
+
+            For Each id As String In ids
+                Dim companiesId As Integer
+                If Integer.TryParse(id, associateId) Then
+                    associateIdList.Add(associateId)
+                End If
+            Next
+
+            associate.CompanyIds = associateIdList
+        End If
+
         Dim response As IHttpActionResult = controller.UpdateAssociate(associate)
 
         If TypeOf response Is OkResult Then

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class EditAssociateForm
+Partial Public Class EditCompanyForm
 
     '''<summary>
     '''Controle form1.
@@ -23,49 +23,40 @@ Partial Public Class EditAssociateForm
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Controle txtAssociateId.
+    '''Controle txtCompanyId.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
     '''</remarks>
-    Protected WithEvents txtAssociateId As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtCompanyId As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle txtName.
+    '''Controle txtCompanyName.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
     '''</remarks>
-    Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtCompanyName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle txtCpf.
+    '''Controle txtCompanyCnpj.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
     '''</remarks>
-    Protected WithEvents txtCpf As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtCompanyCnpj As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Controle txtBirthDay.
+    '''Controle txtAssociateIds.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
     '''</remarks>
-    Protected WithEvents txtBirthDay As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Controle txtCompaniesIds.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents txtCompaniesIds As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtAssociateIds As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Controle btnUpdate.

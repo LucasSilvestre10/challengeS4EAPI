@@ -107,7 +107,9 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="View\AssociatesWebForm.aspx" />
+    <Content Include="View\CompaniesWebForm.aspx" />
     <Content Include="View\EditAssociateForm.aspx" />
+    <Content Include="View\EditCompanyForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -150,12 +152,26 @@
       <DependentUpon>AssociatesWebForm.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="View\CompaniesWebForm.aspx.designer.vb">
+      <DependentUpon>CompaniesWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\CompaniesWebForm.aspx.vb">
+      <DependentUpon>CompaniesWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="View\EditAssociateForm.aspx.designer.vb">
       <DependentUpon>EditAssociateForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\EditAssociateForm.aspx.vb">
       <DependentUpon>EditAssociateForm.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditCompanyForm.aspx.designer.vb">
+      <DependentUpon>EditCompanyForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditCompanyForm.aspx.vb">
+      <DependentUpon>EditCompanyForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

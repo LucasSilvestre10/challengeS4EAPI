@@ -1,9 +1,9 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="EditAssociateForm.aspx.vb" Inherits="challengeS4EAPI.EditAssociateForm" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="EditCompanyForm.aspx.vb" Inherits="challengeS4EAPI.EditCompanyForm" %>
 
 <!DOCTYPE html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Edit Associate</title>
+    <title>Edit Company</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -86,35 +86,50 @@
             background-color: #e74c3c;
         }
     </style>
+    <script>
+        // Função JavaScript para validar o formulário antes de enviar
+        function validateForm() {
+            var companyName = document.getElementById('<%= txtCompanyName.ClientID %>').value;
+            var companyCnpj = document.getElementById('<%= txtCompanyCnpj.ClientID %>').value;
+
+            if (companyName.trim() === '') {
+                alert('Name cannot be empty.');
+                return false;
+            }
+
+            if (companyCnpj.length < 14) {
+                alert('CNPJ must have at least 14 characters.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" onsubmit="return validateForm()">
         <div class="form-container">
-            <h1>Edit Associate</h1>
+            <h1>Edit Company</h1>
             <div>
-                <label for="txtAssociateId">Associate ID:</label>
-                <asp:TextBox ID="txtAssociateId" runat="server" Enabled="false"></asp:TextBox>
+                <label for="txtCompanyId">Companie ID:</label>
+                <asp:TextBox ID="txtCompanyId" runat="server" Enabled="false"></asp:TextBox>
             </div>
             <br />
             <div>
-                <label for="txtName">Name:</label>
-                <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                <label for="txtCompanyName">Name:</label>
+                <asp:TextBox ID="txtCompanyName" runat="server"></asp:TextBox>
             </div>
             <br />
             <div>
-                <label for="txtCpf">CPF:</label>
-                <asp:TextBox ID="txtCpf" runat="server"></asp:TextBox>
-            </div>
-            <br />
-            <div>
-                <label for="txtBirthDay">BirthDay:</label>
-                <asp:TextBox ID="txtBirthDay" runat="server"></asp:TextBox>
+                <label for="txtCompanyCnpj">CNPJ:</label>
+                <asp:TextBox ID="txtCompanyCnpj" runat="server"></asp:TextBox>
             </div>
             <div>
-                <label for="txtCompaniesIds">Companies IDs (separados por vírgula):</label>
-                <asp:TextBox ID="txtCompaniesIds" runat="server" CssClass="form-control"></asp:TextBox>
+                <label for="txtAssociateIds">Associates IDs (separados por vírgula):</label>
+                <asp:TextBox ID="txtAssociateIds" runat="server" CssClass="form-control"></asp:TextBox>
 
             </div>
+            <br />
             <br />
             <div class="btn-container">
                 <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn-update" OnClick="btnUpdate_Click" />

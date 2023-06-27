@@ -87,6 +87,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
+            <asp:Button ID="btnDisplay0" runat="server" Text="Home" CssClass="btn" />
             <h1>Associates</h1>
 
             <div class="form-group">

@@ -87,10 +87,13 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
+            <asp:Button ID="btnDisplay0" runat="server" Text="Home" CssClass="btn" />
+
             <h1>Companies</h1>
 
             <div class="form-group">
                 <asp:Button ID="btnDisplay" runat="server" Text="Exibir Todas" CssClass="btn" />
+                
             </div>
 
             <div class="form-group">

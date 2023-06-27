@@ -110,6 +110,7 @@
     <Content Include="View\CompaniesWebForm.aspx" />
     <Content Include="View\EditAssociateForm.aspx" />
     <Content Include="View\EditCompanyForm.aspx" />
+    <Content Include="View\Home.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +173,13 @@
     <Compile Include="View\EditCompanyForm.aspx.vb">
       <DependentUpon>EditCompanyForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Home.aspx.designer.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Home.aspx.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

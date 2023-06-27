@@ -223,4 +223,7 @@ Public Class AssociatesWebForm
         End If
     End Sub
 
+    Protected Sub btnDisplay0_Click(sender As Object, e As EventArgs) Handles btnDisplay0.Click
+        Response.Redirect("Home.aspx")
+    End Sub
 End Class
